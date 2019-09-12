@@ -21,19 +21,9 @@ class BaiduPCS(object):
         """
         Login
         """
-        self.filepath = filepath
-        self.filename = os.path.basename(filepath)
-        self.dirname = os.path.dirname(filepath)
-        self.filesize = os.path.getsize(filepath)
+        (self.filepath, self.filename, self.dirname, self.filesize) = (filepath, os.path.basename(filepath), os.path.dirname(filepath), os.path.getsize(filepath))
         self.path = self.dirname + '\\' + self.filename.split('.')[0]
-
-        while True:
-            try:
-                self.pcs = PCS(username, password)
-                break
-            except:
-                time.sleep(1)
-                continue
+        self.pcs = PCS(username, password) #Login
 
     def create_upload(self, num):
         self.uplog['md5'][num] = (json.loads(self.pcs.upload_tmpfile(self.block((num - 1) * self.chinksize)).content)['md5'])
