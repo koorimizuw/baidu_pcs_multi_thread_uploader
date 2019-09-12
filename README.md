@@ -3,13 +3,9 @@
 use baidupcsapi: https://github.com/ly0/baidupcsapi
 
 
-
-
 アップロードmd5ファイルは[filename.json]に保存されます。
 
 superfileの実行が失敗したときは[filename.json]が削除されない限り再実行することができます。
-
-
 
 
 share password指定が可能。
