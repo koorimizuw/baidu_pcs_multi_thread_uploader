@@ -99,19 +99,6 @@ class BaiduPCS(object):
             return 0
         return 1
 
-    def GetRandomPassword(self, randomlength=4):
-        """
-        Get 4 bit random password.
-        :return: password.
-        """
-        self.str = ''
-        self.chars = 'qwertyuiopasdfghjklzxcvbnm01234d56789'
-        self.length = len(self.chars) - 1
-        self.random = Random()
-        for i in range(randomlength):
-            self.str += self.chars[self.random.randint(0, self.length)]
-        return self.str
-
     def quota_remaining(self):
         self.quota_info = json.loads(self.pcs.quota().content.decode("utf-8", "ignore"))
         self.remaining = self.quota_info['total'] - self.quota_info['used']
