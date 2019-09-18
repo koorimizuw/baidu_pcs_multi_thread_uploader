@@ -4,5 +4,7 @@ use baidupcsapi: https://github.com/ly0/baidupcsapi
 
 ## 説明
 アップロードmd5ファイルは[filename.json]に保存されます。
+
 superfileの実行が失敗したときは[filename.json]が削除されない限り再実行することができます。
+
 中断されたときのアップロード再開が可能。
