@@ -2,9 +2,7 @@
 
 use baidupcsapi: https://github.com/ly0/baidupcsapi
 
+2020现在原api疑似已经不可用
+
 ## 説明
-アップロードmd5ファイルは[filename.json]に保存されます。
-
-superfileの実行が失敗したときは[filename.json]が削除されない限り再実行することができます。
-
-中断されたときのアップロード再開が可能。
+可以断点续传 记录保存在filename.json
